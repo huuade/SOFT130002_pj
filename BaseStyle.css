@@ -1,0 +1,42 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #333333;
+    background-color: #ffffff;
+    padding: 10px;
+
+}
+.Carousel>.carousel-inner > .item > img {
+
+    display: block;
+    width:100%;
+
+
+}
+
+.imgShow{
+    width: 200px;
+    height: 200px;
+}
+
+
+
+.footer {
+    background-color: black;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 50px;
+    border-radius: 10px;
+
+}
+
+.detailBut{
+    width: 250px;
+    height: 30px;
+    color: rgba(17, 10, 17, 0.86);
+
+}
