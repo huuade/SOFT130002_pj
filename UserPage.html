@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Art Display</title>
+    <link href="BaseStyle.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="Personalized.css" type="text/css">
+    <link rel="stylesheet" href="DetailPage.css" type="text/css">
+
+
+</head>
+<body>
+<!--公用导航页面-->
+<div id="navDiv" class="raw-div"></div>
+<hr>
+<div class="raw-div ">
+    <div class="raw-div-1 profile-div" style="text-align: center">
+        <table style="margin: 70px;text-align: left" cellspacing="20px">
+            <tr>
+                <th colspan="2">个人性息</th>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>Yangch</td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td>19</td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td>5511-006878</td>
+            </tr>
+            <tr>
+            <td>Address</td>
+            <td>China</td>
+            </tr>
+            <tr>
+                <th colspan="2"><button>修改</button></th>
+            </tr>
+        </table>
+    </div>
+    <div class="raw-div-3 collect-div">
+        <P style="text-align: center ;size: 10px">收藏中心</P>
+        <hr>
+        <div id ="box1" class="cen-block-div photo-box" >
+
+            <img src="img/6.jpg"   class="imgShow">
+            <strong ><p style="text-align: center ; margin-top: 10px">Body</p></strong>
+            <hr>
+            <strong>G.Liu</strong>
+            <p>Foremost among the differences are the use of ink and silk paper as opposed to oil and canvas, the use of a silk scroll rather than a wood. </p>
+            <button class="detailBut" onclick="deleteBox(this)" value="xxx"> 删除 </button>
+        </div>
+        <div class="cen-block-div photo-box">
+            <img src="img/15.jpg" class="imgShow"  >
+            <strong ><p style="text-align: center; margin-top: 10px">Mother</p></strong>
+            <hr>
+            <strong>G.Yang</strong>
+            <p>They were the oddest hills in the world, and also the most Chinese, because these are the hills that are depicted in every Chinese the scroll. </p>
+            <button class="detailBut" onclick="deleteBox(this)" value="xxx"> 删除 </button>
+        </div>
+        <div class="cen-block-div photo-box" >
+
+            <img src="img/26.jpg"   class="imgShow">
+            <strong ><p style="text-align: center ; margin-top: 10px">Body</p></strong>
+            <hr>
+            <strong>G.Liu</strong>
+            <p>Paul Theroux, Riding the Iron Rooster, 1988 When looking at a Chinese painting, most visitors will remark upon the enormous differences from Western painting tradition.  </p>
+            <button class="detailBut" onclick="deleteBox(this)" value="xxx"> 删除 </button>
+        </div>
+    </div>
+
+</div>
+<hr>
+
+<div class="footer" >
+    <p style="color: #65ffd4">@ArtStore.produced and maintained by Yangch at 2021.3.24...</p>
+</div>
+
+
+
+
+
+</body>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script >
+    $(function () {
+        $("#navDiv").load("Nav.html");
+
+    });
+    function deleteBox(element) {
+       var parentDiv = element.parentElement;
+       parentDiv.remove();
+
+
+    }
+</script>
+
+</html>

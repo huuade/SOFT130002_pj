@@ -2,21 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Register</title>
     <link rel="stylesheet" type="text/css" href="Login.css"/>
 </head>
 <body>
 <div id="login">
     <a href="HomePage.html" style="text-decoration: none"><h1>Art store</h1></a>
-    <form method="post">
-        <input type="text" required="required" placeholder="用户名" name="u">
-        <input type="password" required="required" placeholder="密码" name="p">
-        <input type="password" required="required" placeholder="确认密码" name="p">
-        <div style=" text-align: center; padding: 10px" >
-            <button class="but" type="submit" onclick="window.location.href='LoginPage.html'">返回登录</button>
-            <button class="but" type="submit" onclick="window.location.href='HomePage.html'">注册</button>
-        </div>
+    <form  method="post" style="text-align: center">
+        <input id="user" type="text" required="required" placeholder="用户名" name="u">
+        <input id="pass" type="password" required="required" placeholder="密码" name="p">
+        <input id="conform" type="password" required="required" placeholder="确认密码" name="p">
+        <button class="but" type="submit" onclick="logCheck()">注册</button>
+        <button class="but" type="submit" onclick="window.location.href='LoginPage.html'">返回登录</button>
     </form>
 </div>
 </body>
+<script>
+    var user = document.getElementById("user");
+    var pass = document.getElementById("pass");
+    var cpass = document.getElementById("conform");
+    var regx = new RegExp('^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{2,}$');
+
+    function logCheck() {
+        if(pass.value ==="" || user.value === "" || cpass === "")
+            window.alert("请将信息填写完整！");
+        else if(pass.value !== cpass.value){
+            window.alert("两次输入密码不同");
+        }
+        else if(!regx.test(pass.value)){
+            window.alert("密码格式错误！");
+        }
+        else {
+            window.location.href = "HomePage.html";
+            window.event.returnValue=false;
+            window.alert("您已注册成功！");
+            return 0;
+        }
+
+
+    }
+</script>
+
+
 </html>

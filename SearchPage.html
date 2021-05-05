@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Art display</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+    <!-- 引入 Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="BaseStyle.css">
+    <link rel="stylesheet" type="text/css" href="Search.css">
+</head>
+<body>
+
+<div class="" >
+    <!--公用导航页面-->
+    <div id="navDiv" class="raw-div"></div>
+
+    <!-- 搜索框 -->
+    <div id="search" class="">
+        <div id="search-wrap" >
+            <label>
+                <select class="search-choice">
+                    <option>关键词</option>
+                    <option>热度</option>
+                    <option>作者</option>
+                </select>
+            </label>
+            <input class="search-content" type="text" placeholder="请输入..." name="word">
+            <button class="search-btn"  onclick="addBox()">搜索</button>
+        </div>
+    </div>
+
+
+    <strong><p style="text-align: center" >搜索结果</p></strong>
+    <div id = "resultBox" class="row">
+
+        <div id ="child1" class="cen-block-div" >
+            <hr>
+            <img src="img/6.jpg"   class="imgShow">
+            <strong ><p style="text-align: center ; margin-top: 10px">Body</p></strong>
+            <hr>
+            <strong>G.Liu</strong>
+            <p>Foremost among the differences are the use of ink and silk paper as opposed to oil and canvas, the use of a silk scroll rather than a wood. </p>
+            <a href="DetailPage.html">Learn More</a>
+        </div>
+
+        <div id ="child2" class="cen-block-div ">
+            <hr>
+            <img src="img/18.jpg"  class="imgShow" >
+            <strong ><p style="text-align: center;  margin-top: 10px">Self</p></strong>
+            <hr>
+            <strong>G.Huade</strong>
+            <p>Paul Theroux, Riding the Iron Rooster, 1988 When looking at a Chinese painting, most visitors will remark upon the enormous differences from Western painting tradition.  </p>
+            <a href="DetailPage.html">Learn More</a>
+        </div>
+        <div id ="child3" class="cen-block-div">
+            <hr>
+            <img src="img/15.jpg" class="imgShow"  >
+            <strong ><p style="text-align: center; margin-top: 10px">Mother</p></strong>
+            <hr>
+            <strong>G.Yang</strong>
+            <p>They were the oddest hills in the world, and the most Chinese, because these are the hills that are depicted in every Chinese the scroll. </p>
+            <a href="DetailPage.html">Learn More</a>
+        </div>
+    </div>
+
+    <hr>
+    <!--分页组件-->
+    <div class="raw-div" style="text-align: center">
+        <ul class="raw-ul">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </div >
+    ​</div>
+
+<footer class="footer" >
+    <p style="color: #65ffd4">@ArtStore.produced and maintained by Yangch at 2021.3.24...</p>
+</footer>
+
+
+
+
+
+
+
+
+
+
+</body>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script >
+    $(function () {
+        $("#navDiv").load("Nav.html");
+
+    });
+
+    var resultBox = document.getElementById("resultBox");
+    var child1 = document.getElementById("child1");
+    var child2 = document.getElementById("child2");
+    var child3 = document.getElementById("child3");
+    resultBox.removeChild(child1);
+    resultBox.removeChild(child2);
+    resultBox.removeChild(child3);
+
+    var pElement = document.createElement("h2");
+    pElement.innerText = "There is nothing!";
+    resultBox.appendChild(pElement);
+
+    function addBox() {
+        resultBox.removeChild(pElement);
+        resultBox.appendChild(child1);
+        resultBox.appendChild(child2);
+        resultBox.appendChild(child3);
+
+
+    }
+
+
+
+
+
+
+
+</script>
+</html>

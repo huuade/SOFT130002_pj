@@ -4,18 +4,47 @@
     <meta charset="UTF-8">
     <title>Login</title>
     <link rel="stylesheet" type="text/css" href="Login.css"/>
+    <base target="_self">
 </head>
 <body>
 <div id="login">
     <a href="HomePage.html" style="text-decoration: none"><h1>Art store</h1></a>
-    <form method="post">
-        <input type="text" required="required" placeholder="用户名" name="u">
-        <input type="password" required="required" placeholder="密码" name="p">
-        <div style=" text-align: center; padding: 10px" >
-        <button class="but" type="submit" onclick="window.location.href='HomePage.html'">登录</button>
-        <button class="but" type="submit" onclick="window.location.href='RegisterPage.html'">注册</button>
-        </div>
+    <form method="post"  style="text-align: center">
+        <input id="uname" onblur="userTip()" type="text" placeholder="用户名" >
+        <input id="password" type="password" required="required" placeholder="密码" name="p">
+        <button class="but" type="submit"  onclick="logCheck()">登录</button>
+        <button class="but" type="submit"  onclick="window.open('RegisterPage.html')">注册</button>
     </form>
 </div>
 </body>
+<script>
+    //表示User以及Password为true时，用户、密码非空
+    var ucheck = false;
+    var pcheck = false;
+    var user = document.getElementById("uname");
+    var pass = document.getElementById("password");
+    function userTip() {
+        if(user.value === ""){
+            user.placeholder = "用户名不能为空";
+        }
+        else {
+            ucheck = true;
+        }
+    }
+    function logCheck() {
+        if(pass.value !=="")
+            pcheck = true;
+        if(ucheck && pcheck){
+            window.location.href = "HomePage.html";
+            window.event.returnValue=false;
+            window.alert("您已登录成功！");
+            return 0;
+        }
+        else {
+            window.alert("请注意填写用户名及密码！");
+            return 0;
+        }
+    }
+
+</script>
 </html>

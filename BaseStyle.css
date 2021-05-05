@@ -1,12 +1,87 @@
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.428571429;
     color: #333333;
-    background-color: #ffffff;
-    padding: 10px;
+    background-color: rgba(77, 203, 171, 0.63);
+    text-align: center;
+
+
+
+
 
 }
+.raw-div{
+    width: 100%;
+    text-align: left;
+    display: block;
+    padding: 0;
+
+
+
+}
+
+.raw-div-3{
+    display:inline-block ;
+    width: 70%;
+    text-align: left;
+
+
+}
+.raw-div-1{
+      display:inline-block;
+      width:25%;
+  }
+.raw-div-2{
+    display:inline-block;
+    width:40%;
+
+
+}
+
+.raw-ul{
+    display:block;
+    white-space:nowrap;
+    width: auto;
+    overflow:auto;
+
+
+
+}
+.raw-ul li{
+    display:inline-block;
+    font-size: larger;
+    list-style:none;
+    text-decoration: none;
+    padding: 5px;
+
+
+
+}
+.raw-ul li a{
+    text-decoration: none;
+}
+.raw-ul li:hover{
+    border-radius: 5px;
+    background-color: rgb(31, 5, 17);
+
+
+}
+.raw-ul li a:hover{
+    color: rgba(255, 245, 253, 0.99);
+    text-shadow:0 0 10px;
+    font-size: larger;
+}
+
+.cen-block-div{
+     text-align: center;
+     display: inline-block ;
+     width: 30%;
+     height: 100%;
+
+ }
+
+
 .Carousel>.carousel-inner > .item > img {
 
     display: block;
@@ -18,25 +93,22 @@ body {
 .imgShow{
     width: 200px;
     height: 200px;
+    border-radius: 50%;
 }
 
 
 
 .footer {
-    background-color: black;
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    background-color: rgba(58, 21, 47, 0.95);
     /* Set the fixed height of the footer here */
-    height: 50px;
-    border-radius: 10px;
+    height: 40px;
+    text-align: center;
+    margin-bottom:0 ;
+    width: 100%;
+    padding: 1px;
+    display: block;
+
 
 }
 
-.detailBut{
-    width: 250px;
-    height: 30px;
-    color: rgba(17, 10, 17, 0.86);
 
-}

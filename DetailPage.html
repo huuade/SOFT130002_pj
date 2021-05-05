@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Art display</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="BaseStyle.css">
+    <link rel="stylesheet" type="text/css" href="DetailPage.css">
+</head>
+<body>
+<!--公用导航页面-->
+<div id="navDiv" class="raw-div"></div>
+
+
+<hr>
+    <strong><p style="text-align: center ; font-family:Cambria ; font-size: large" >People and Gun</p></strong>
+    <p style="text-align: center" title="Artist"> Foremost among the differences are the use of ink and silk paper as opposed to oil and canvas, the use of a silk scroll rather than a wood. </p>
+    <hr>
+
+    <div class="raw-div">
+        <div class="raw-div-2 " style="margin-left: 10%">
+            <img src="img/181.jpg"  height="70%" width="70%" style="border-radius: 5px">
+        </div>
+
+        <!-- 商品信息 -->
+        <div class="raw-div-2 ">
+            <table >
+                <tbody>
+                <tr><P>Artist: <strong>G.BOY</strong></P></tr>
+                <tr><P>Style: <strong>Hot Papy</strong></P> </tr>
+                <tr><p>Size:  60cm * 60cm</p></tr>
+                <tr><p>Time:  1879s</p></tr>
+                <tr><p>Location: California</p></tr>
+                <hr>
+                <tr><p>HEAT: <strong> 899 hits</strong></p></tr>
+                <tr><p>PRICE: <strong> $67830000.00</strong></p></tr>
+                <hr>
+                </tbody>
+            </table>
+        </div>
+        <button class="detailBut" id="detBut" onclick="clickDetBut()" value="收藏" style="margin-left: 40%;">收藏</button>
+    </div>
+
+
+
+
+    ​
+
+    <hr>
+
+
+
+
+    <footer class="footer">
+        <p style="color: #65ffd4">@ArtStore.produced and maintained by Yangch at 2021.3.24...</p>
+    </footer>
+
+
+
+
+
+
+<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+
+
+</body>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script >
+    $(function () {
+        $("#navDiv").load("Nav.html");
+
+    });
+
+    function clickDetBut() {
+        document.getElementById("detBut").innerText = "已收藏";
+        window.alert("添加成功！");
+
+    }
+</script>
+</html>
